@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form submission with javascript</title>
+</head>
+<body>
+    <form onsubmit="return calljsfunction();">
+        <label>Enter the name:</label>
+        <input type="text" name="txtinput" id="txtinput"><br>
+        <input type="submit" name="btnsubmit" value="SendData">
+    </form>
+</body>
+<script type="text/javascript">
+    function calljsfunction(){
+        var namevalue = document.getElementById("txtinput").value;
+        alert("Entered value is: " + namevalue);
+        return false; // This prevents the form from submitting and reloading the page
+    }
+</script>
+</html>

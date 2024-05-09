@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This keyword</title>
+</head>
+<body>
+    <form>
+        <center>
+            <h3>This keyword in js</h3>
+                <label>Enter clg name</label>
+                <p></p>
+                <input type="text" name="txtname" id="textname"><br/>
+                <input type="button" value="display" onclick="readdisplaytxtvalue(this.form)">
+            
+        </center>
+    </form>
+    <span id="displaymsg"></span>
+</body>
+<script type="text/javascript">
+    function readdisplaytxtvalue(frmData){
+        document.getElementById("displaymsg").innerHTML="The entered clg name is:"+frmData.txtname.value;
+    }
+</script>
+</html>

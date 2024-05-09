@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h3>Reading return value of the confirm function in js</h3>
+        <button onclick="CheckReturnValues();">Read Values</button>
+    </center>
+</body>
+<script type="text/javascript">
+    function CheckReturnValues(){
+        var returnval = confirm("Do you want to continue!!!!");
+        if(returnval === true)//it checks value along with data types
+        {
+            window.location="css1.html";
+        }
+        else{
+            window.location="cse_webp.html";
+        }
+    }
+</script>
+</html>

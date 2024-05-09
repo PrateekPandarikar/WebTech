@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Sign-In-Page</title>
+</head>
+<body>
+	
+     <form action="Process.php" method="post"><!-- to send the data in the server,action are  method are imp to go to that page and hash is used to get back to this page itself -->
+      <fieldset><!--to put border-->
+      	<legend>Login Page</legend>
+     <table border="5">
+     	<tr><!-- v use table tr td to access particular rows n columns -->
+           <td><label>Enter your UserName:</label><input type="text" name="txtname"></td>
+        </tr>
+        <tr>  
+           <td><label>Enter your Password:</label><input type="Password" name="txtpwd"><!-- v use password so that the text shouldnt be visible --></td>
+        </tr>
+        <tr>
+         <td><input type="submit" value="Submit">
+           <input type="reset" value="Clear"></td>
+        </tr>
+        <tr>
+        	<td colspan="2"><a href="Logindetails.html">Sign-Up</a></td>
+        </tr>
+     
+ 	 </table>
+ 	  </fieldset>
+ 	 </form>
+    
+</body>
+
+</html>

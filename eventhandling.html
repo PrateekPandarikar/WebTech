@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event handling</title>
+</head>
+<body>
+    <h2>MOuse and keyboard event handling</h2>
+    <div id="divtext" onmouseover="applycolor();" onmouseout="changecolor();">
+        <span>Computer science and engineering department</span>
+    </div>
+    <img height="250px" width="250px" src="spidey.jpg" id="myimg" onmouseover="updateimg();" onmouseout="changeimg();">
+</body>
+<script type="text/javascript">
+    function applycolor(){
+        document.getElementById("divtext").style.color="Black";//to change color
+        document.getElementById("divtext").innerText="SDM is not a clg";//to change text
+    }
+    function changecolor(){
+        document.getElementById("divtext").style.color="Red";//to change color
+    }
+    function updateimg(){
+        document.getElementById("myimg").src="orange2.jpg";//to chage img
+    }
+    function changeimg(){
+        document.getElementById("myimg").src="orange2edit.jpg";//to change img
+    }
+</script>
+</html>

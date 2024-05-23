@@ -1,55 +1,51 @@
-<!-- Login Page that check if the entered username and passworld is valid or not -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sign-In Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-    <form method="post">
-        <fieldset>
-            <legend>Login Page</legend>
-            <table>
-                <tr>
-                    <td><label>Enter username: </label></td>
-                    <td><input type="text" name="txtname" id="txtusrname"></td>
-                </tr>
-                <tr>
-                    <td><label>Enter password: </label></td>
-                    <td><input type="password" name="txtpass" id="txtpwd"></td>
-                </tr>
-                <tr>
-                    <td><input type="button" value="Submit" onclick="validateLoginDetails()"></td>
-                    <td><input type="reset" value="Clear"></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><a href="../Unit - 1/HTML/LoginDetails.html">Sign-Up</a></td>
-                </tr>
-            </table>
-        </fieldset>
-    </form> 
+    <fieldset>
+        <legend>Login Verification</legend> 
+        <table>
+            <tr>
+                <td colspan="2"><label for="">Enter username : </label></td>
+                <td><input type="text" id="txtusrname"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><label for="">Enter password : </label></td>
+                <td><input type="password" id="txtpwd"></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td><button onclick="verify();">Login</button></td>
+            </tr>
+        </table>
+    </fieldset>
+    <span id="result"></span>
 </body>
-<script type="text/javascript">
-    function validateLoginDetails(){
-        var usrName = document.getElementById("txtusrname").value;
-        var usrPwd = document.getElementById("txtpwd").value;
-        var pattern = /[a-zA-Z]/;   //Input should contain A-Z or a-z
-        var pattern2 = /^abc/; //Input should start with abc
-        var pattern3 = /cse$/; //Input should end with cse
-        var pattern4 = /[0-9]/; //Input should contain 0-9
-        var regobj = new RegExp("Web"); //Using objects constructor
-        if(usrName != "" && usrPwd != ""){
-            if(usrName.match(pattern) && usrPwd.match(pattern)){
-                if(usrName == "Sdmcet" && usrPwd == "web"){
-                    window.location = "../Unit - 1/HTML/MainPageFrames.html";
-                }else{  
-                    alert("Please verify the User name or Password");
-                }
-            }else{
-                alert("Please verify input values!!!");
+</html>
+
+<script>
+    function verify(){
+        var user=document.getElementById("txtusrname").value;
+        var pass=document.getElementById("txtpwd").value;
+        var pattern1 = /[a-zA-Z]/;
+        var pattern2 = /@gmail.com$/;
+        if(user != "" && pass != ""){
+            if(user.match(pattern2) && pass.match(pattern1)){
+               if(user == "sdmcet@gmail.com" && pass =="passcse"){
+                window.location="Logindetails.html";
             }
-        }else{
-            alert("Please enter the values of User name and Password");
+        }
+            else{
+                alert("Please enter valid username && password");
+            }
+        }
+        else
+        {
+            alert("Please enter username and password");
         }
     }
 </script>
-</html>

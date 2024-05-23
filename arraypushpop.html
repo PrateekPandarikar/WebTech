@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array push pop</title>
+</head>
+<body>
+    <center>
+        <label>Enter the collgege Name:</label>
+        <input type="text" id="txtcollegename"><br/>
+        <input type="button" value="Insert" onclick="savevalues();">
+        <input type="button" value="Display" onclick="Readvalues();"><br>
+        <span id="clgname"></span>
+    </center>
+</body>
+</html>
+<script type="text/javascript">
+    var collegeDatabase=[];
+    function savevalues(){
+            //Read pr fetch GUI values
+            var txtvalue =document.getElementById("txtcollegename").value;
+            //insert textbox value to array object
+            if(txtvalue !=""){
+                collegeDatabase.push(txtvalue);
+                document.getElementById("txtcollegename").value="";
+                alert("Record is inserted succesfully!!!");
+            }
+            else{
+                alert("Enter the college name!!!");
+            }
+    }
+    function Readvalues(){
+        var databaselen=collegeDatabase.length;
+        var colleges = "";
+        if(databaselen > 0){
+       
+        for(var i=0;i<collegeDatabase.length;i++){
+          colleges +=collegeDatabase[i]+"<br>";//to give a line space after each clg name
+            }
+        document.getElementById("clgname").innerHTML="list of colleges <br/>"+colleges;
+    }
+    else{
+        alert("Record not found");
+    }
+}
+
+</script>

@@ -31,7 +31,7 @@
     function verify(){
         var user=document.getElementById("txtusrname").value;
         var pass=document.getElementById("txtpwd").value;
-        var pattern1 = /[a-zA-Z]/;
+        var pattern1 = /^[a-zA-Z]*$/;
         var pattern2 = /@gmail.com$/;
         if(user != "" && pass != ""){
             if(user.match(pattern2) && pass.match(pattern1)){
